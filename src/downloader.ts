@@ -18,6 +18,8 @@ export const downloadAudioFromUrl = async (url: string): Promise<AudioFile> => {
     }
     const cookies = JSON.parse(process.env.YOUTUBE_COOKIES || '[]') as Cookie[];
 
+    console.log('using cookies:', cookies);
+
      const agent = ytdl.createAgent(cookies);
 
     const videoInfo: videoInfo = await ytdl.getInfo(url,  {agent});
