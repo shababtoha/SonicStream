@@ -22,7 +22,7 @@ const handleInteraction = async (interaction: ChatInputCommandInteraction) => {
                 await downloadAndPlayAudio(interaction, url);
             } catch (error) {
                 console.error('Error downloading or playing audio:', error);
-                await interaction.reply({ content: '❌ An error occurred while processing the audio.' });
+                await interaction.editReply({ content: '❌ An error occurred while processing the audio.' });
             }
             break;
         case 'search':
@@ -36,7 +36,7 @@ const handleInteraction = async (interaction: ChatInputCommandInteraction) => {
                 await searchAndPlayAudio(interaction, title);
             } catch (error) {
                 console.error('Error searching for audio:', error);
-                await interaction.reply({ content: '❌ An error occurred while searching for the song.' });
+                await interaction.editReply({ content: '❌ An error occurred while searching for the song.' });
             }
             break;
         case 'stop':

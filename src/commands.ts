@@ -32,5 +32,9 @@ export const commands: ApplicationCommandData[] = [
                 required: true,
             }
         ]
+    },
+    {
+        name: 'stop',
+        description: 'Stop the audio playback and disconnect from the voice channel',
     }
 ];
