@@ -42,7 +42,7 @@ const handleInteraction = async (interaction: ChatInputCommandInteraction) => {
         case 'stop':
             // Assuming you have a function to stop the audio playback
             // This function should handle stopping the audio player and cleaning up resources
-            await interaction.reply('Stopping the audio playback...');
+            await interaction.reply('Stopping the audio playback and disconnecting...');
             await stopAudioPlayback(interaction);
             break;
         default:
