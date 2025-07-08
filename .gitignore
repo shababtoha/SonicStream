@@ -1,0 +1,8 @@
+.idea
+node_modules
+dist
+
+# ignore all  files
+audios
+
+.env
